@@ -1,0 +1,304 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+    }
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+.menu {
+    padding-right: 5px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        padding-left: 10px;
+    }
+
+    &__list-link {
+        @extend %title-font !optional;
+        line-height: 20px;
+        color: #000000;
+        text-transform: uppercase;
+        padding: 43px 20px;
+        transition: all .3s;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #84898b;
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.footer {
+    &__content {
+        background: #DFDFDF;
+        padding: 60px 0 80px;
+
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        width: 940px;
+    }
+
+    &__info-title {
+        color: $title;
+        @extend %title-font;
+        margin-bottom: 14px;
+        line-height: 23px;
+        font-size: 18px;
+        font-weight: bold;
+        @extend %title-font;
+    }
+
+    &__info-text {
+        margin-bottom: 16px;
+        max-width: 875px;
+        text-align: justify;
+    }
+
+    &__info-email {
+        font-weight: 600;
+        font-size: 14px;
+        color: $title;
+        margin-bottom: 22px;
+        padding-left: 30px;
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-image: url(../images/email.png);
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 16px;
+            height: 12px;
+        }
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__form-input {
+        padding: 6px 10px 6px 18px;
+        border-radius: 21px;
+        background-color: transparent;
+        opacity: 0.7;
+        border: 1px solid rgba($title, .7);
+
+
+        &::placeholder {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: #a1a1a1;
+        }
+    }
+
+    &__form-button {
+        background-color: $title;
+        border: none;
+        color: #fffff0;
+        border-radius: 21px;
+        font-weight: 600;
+        padding: 6px 12px;
+        min-width: 160px;
+        margin-left: 9px;
+        cursor: pointer;
+    }
+
+    &__social {
+        width: 125px;
+        margin-right: auto;
+        margin-left: 100px;
+    }
+
+    &__social-item {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #707070;
+    }
+
+    &__social-link {
+        color: #707070;
+        padding-left: 28px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 16px;
+            height: 16px;
+
+        }
+    }
+
+    &__social-link--instagram::before {
+        background-image: url(../images/instagram.svg);
+        width: 14px;
+        height: 14px;
+        top: 4px;
+    }
+
+
+    &__copyright {
+        background-color: $title;
+        color: #a1a1a1;
+        text-align: center;
+        padding: 42px 0 41px;
+    }
+}
+
+.top {
+    &__inner {
+        padding-bottom: 70px;
+        position: relative;
+        // &::after{
+        //    content: '';
+        //  background-image: url();
+        //position: absolute;
+        //width: 100%;
+        //height: 722px;
+        //top: 0;
+        //z-index: -1;
+        //}
+    }
+
+    &__slider-item {
+        position: relative; // Встановлюємо позиціонування для блоку
+    }
+
+    &__slider-img {
+        display: block;
+        width: 100%; // Встановлюємо ширину картинки
+        height: auto; // Автоматична висота для збереження пропорцій
+    }
+
+    &__slider-info {
+        position: absolute; // Встановлюємо позиціонування для текстового блоку
+        top: 0; // Позиція зверху
+        right: 0; // Позиція справа
+        padding: 20px; // Внутрішні відступи
+        border-radius: 5px; // Заокруглені кути
+        text-align: right;
+        width: 600px;
+    }
+
+    &__slider-title {
+        font-family: 'Nanum Myeongjo';
+        color: #6D7278;
+        font-size: 50px; // Розмір тексту заголовка
+        line-height: 100px;
+        padding-bottom: 26px;
+        margin-bottom: 26px;
+        position: relative;
+        text-align: center;
+        @extend %title-font;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 90%;
+            left: 0;
+            bottom: 0;
+            width: 185px;
+            height: 1px;
+            background: #6D7278;
+            left: calc(50% - 92.5px - 145px);
+        }
+    }
+
+    &__slider-text {
+        font-family: 'Nanum Myeongjo';
+        font-size: 30px; // Розмір тексту
+        color: #6D7278;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        text-align: left;
+        position: absolute;
+        text-align: justify;
+        width: 500px;
+        word-spacing: normal;
+    }
+
+    .path-icon {
+        padding: 80px 0 30px;
+          
+       
+        
+        &__title {
+            @extend %title-font;
+            text-align: center;
+            color: $title;
+            margin-bottom: 40px;
+            font-size: 36px;
+            line-height: 51px;
+
+        }
+
+        &__items-box {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-bottom: 2px solid rgba($title, .7);
+            position: relative;
+            
+        }
+
+        &__item {
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 30px;
+    
+        }
+
+        &__item--efect {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+       
+
+        &__item-title {
+            margin-left: 13px;
+            color: $title;
+            @extend %title-font;
+        }
+
+        &__item-text {
+            margin-top: 13px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+
+}
